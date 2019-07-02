@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/css/icon-font.css",
               "src/styles/main.scss"
             ],
             "stylePreprocessorOptions": {

@@ -1,0 +1,28 @@
+.secondary-heading{
+    display:inline-block;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    margin-top:2rem;
+    text-transform:uppercase;
+    background-image: linear-gradient(to right, $light-red, $dark-red);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+.tertiary-heading{
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+    margin-top: 2rem;
+    color: $grey-color;
+    text-transform: uppercase;
+}
+
+p{
+    font-size: 1.4rem;
+
+    &:not(last-child){
+        margin-bottom: 1rem;
+    }
+}
