@@ -1,0 +1,35 @@
+.btn{
+    &,
+    &:link,
+    &:visited{
+        display:inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $default-font-size;
+        background-color: $dark-red;
+        color:$white-color;
+        padding:1.5rem 4rem;
+        border:none;
+        border-radius: 25%;
+        transition: all 2ms;
+        cursor: pointer;  
+    }
+   
+    &:hover{
+        transform: translateY(-3px);
+        background-color: $light-red;
+        box-shadow: 0 .5rem 1rem rgba($black-color, .2);
+
+        ::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity:0;
+        }
+    }
+
+    &:active, 
+    &:focus{
+        outline: none;
+        transform:translateX(-1px);
+        box-shadow: 0 .5rem 1rem rgba($black-color, .2);
+    }
+}
