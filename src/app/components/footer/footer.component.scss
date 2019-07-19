@@ -1,0 +1,56 @@
+@import "abstracts/variables";
+
+.footer{
+    background-color:$white-color;
+    padding:8rem 0;
+    font-size: 1.4rem;
+
+    &__logo{
+        width:10rem;
+        height:auto;
+    }
+    &__logobox{
+        text-align: center;
+        padding:4rem 2rem;
+    }
+
+    &__navigation{   
+        display:inline-block;     
+        border-top:1px solid $dark-grey2;
+        margin-right: 5rem;
+        
+    }
+
+    &__list{
+        display:inline-block;
+        padding-top:2rem;
+
+        &:not(:last-child){
+            margin-right:1.5rem;
+        }
+        
+    }
+
+    &__link{
+        display:inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        color:$dark-grey; 
+        padding:.4rem .4rem;
+        transition: all .2s;
+
+        &:hover{
+            color: $dark-red;
+            box-shadow: 0 1rem 2rem rgba($black-color, .4);
+            transform: rotate(-10deg) scale(1.2);
+        }
+       
+    }
+
+    &__copyright{
+        display: inline-block;
+        margin-left:6rem;
+        // float:right;
+        border-top:1px solid $dark-grey2;
+    }
+}
