@@ -1,16 +1,26 @@
-<div class="popup">
+<div class="popup" id="popup">
     <div class="popup__content">
       <div class="popup__left">
-        <img class="popup__img" src="assets/img/pic1.jpg" alt="">
-        <img class="popup__img" src="assets/img/pic2.jpg" alt="">
+        <img srcset="assets/img/pic1.jpg 300w, assets/img/pic1-large.jpg 1000w"
+         sizes="(max-width:125em) 20vw, (max-width:37.5em) 30vw, 20em"
+         src="assets/img/pic1-large.jpg " 
+         alt="photo1"
+         class="popup__img">
+         <img srcset="assets/img/pic2.jpg 300w, assets/img/pic2-large.jpg 1000w"
+         sizes="(max-width:125em) 20vw, (max-width:37.5em) 30vw, 20em"
+         src="assets/img/pic2-large.jpg " 
+         alt="photo2"
+         class="popup__img">
+  
       </div>
       <div class="popup__right">
+          <a href="#section-about" class="popup__close">&times;</a>
         <h2 class="secondary-heading u-margin-bottom-small">Book tours now</h2>
         <h3 class="tertiary-heading u-margin-bottom-small">Important! &ndash; Read terms before booking</h3>
         <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati et eum blanditiis mollitia iure, quis necessitatibus ut quibusdam aspernatur, 
           illum odio molestias soluta debitis earum voluptatibus fugit similique enim quam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis temporibus consequatur dolorem, nemo, ad, repudiandae 
           iure porro consequuntur in delectus vero magnam maxime harum vitae iusto? Voluptatem at ea non.</p>
-        <a href="#" class="btn btn--red">Book</a>
+        <a href="#" class="btn btn--red">Book now</a>
       </div>
     </div>
 </div>

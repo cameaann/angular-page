@@ -1,0 +1,46 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+.header{
+    height:100vh;
+    position:relative;
+    background-image: linear-gradient(to right bottom,
+    rgba($light-grey, 0.8),
+    rgba($dark-red, 0.8)),
+    url('src/assets/img/header-pic-small2.jpg');
+    background-size: cover;
+    
+    // background-position: top;
+
+    @media(min-resolution:192dpi) and (min-width:37.5em),
+    (-webkit-min-device-pixel-ratio:2) and (min-width:37.5em),
+    (min-width:125em){
+        background-image: linear-gradient(to right bottom,
+        rgba($light-grey, 0.8),
+        rgba($dark-red, 0.8)),
+        url('src/assets/img/header-pic.jpg');
+    }
+
+    @include response(tab-port){
+        height:85vh;
+    }
+   
+    &__logobox{
+        position:absolute; 
+        top:4rem;
+        left:4rem;
+    }
+
+    &__logo{
+        height:6rem;
+    }
+
+    &__textbox{
+        position: absolute;
+        
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}

@@ -8,6 +8,11 @@ import { StoryComponent } from './components/story/story.component';
 import { BookingComponent } from './components/booking/booking.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PopupComponent } from './components/popup/popup.component';
+import { SectionToursComponent } from './components/section-tours/section-tours.component';
+import { TourComponent } from './components/tour/tour.component';
+import { HeaderComponent } from './components/header/header.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,10 @@ import { PopupComponent } from './components/popup/popup.component';
     StoryComponent,
     BookingComponent,
     FooterComponent,
-    PopupComponent
+    PopupComponent,
+    SectionToursComponent,
+    TourComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

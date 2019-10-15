@@ -7,13 +7,22 @@ border-radius: 3px;
 box-shadow: 0 1.5rem 4rem rgba($dark-grey, .15);
 transition: transform .3s;
 
+@include response(tab-port){
+    padding:2rem;
+}
+
     &__icon{
         font-size: 5rem;
         display:inline-block;
         margin-bottom:.5rem;
         background-image: linear-gradient(to right, $light-red, $dark-red);
+        background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        @include response(tab-port){
+            margin-bottom:0;
+        }
     }
     &:hover{
         transform: translateY(-1.5rem) scale(1.03);

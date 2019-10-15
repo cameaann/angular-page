@@ -1,14 +1,17 @@
 .section-about{
-    padding:10rem 0 20rem 0;
-    // margin:2rem;
+    padding:15rem 0;
+
+    @include response(tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .section-features{
-    padding: 20rem 0;
+    padding: 15rem 0;
     background-image: linear-gradient(to right bottom,
-        rgba($light-red, 0.8),
+        rgba($light-grey, 0.8),
         rgba($dark-red, 0.8)),
-        url("src/assets/img/pic1.jpg");
+        url("src/assets/img/pic8-small.jpg");
     background-size: cover;
     // margin-top:-10rem;
     transform: skewY(-7deg);
@@ -16,18 +19,47 @@
     & >*{
         transform: skewY(7deg);
     }
+
+    @media(min-resolution:192dpi) and (min-width:37.5em),
+    (min-width:125em){
+        background-image: linear-gradient(to right bottom,
+        rgba($light-grey, 0.8),
+        rgba($dark-red, 0.8)),
+        url("src/assets/img/pic8-medium.jpg");
+    }
+
+    @include response(tab-port){
+        padding: 10rem 0;
+    }
 }
 
 .section-stories{
-    padding: 20rem 0;
-    padding-top:-40rem;
+    padding-top:20rem;
+    padding-bottom: 5rem;
     position: relative;
-    margin-top:-10rem;
+    margin-top:-20rem;
+    // height:100%;
+
+    @include response(phone){
+        padding: 15rem 0;
+    }
 }
 
 .section-booking{
-    padding: 20rem 0;
+    padding: 10rem 0;
     background-image: linear-gradient(to right bottom,
-        rgba($light-red, 0.8),
+        rgba($light-grey, 0.8),
         rgba($dark-red, 0.8));
+
+        @include response(tab-port){
+            padding: 5rem 0;
+        }
+}
+
+.section-tours{
+    padding: 4rem 0;
+
+    @include response(tab-port){
+        padding: 3rem 0;
+    }
 }

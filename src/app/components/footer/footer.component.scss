@@ -1,23 +1,39 @@
 @import "abstracts/variables";
+@import "abstracts/mixins";
 
 .footer{
     background-color:$white-color;
     padding:8rem 0;
     font-size: 1.4rem;
 
-    &__logo{
-        width:10rem;
-        height:auto;
+    @include response(tab-port){
+        padding:4rem 0;
     }
+
     &__logobox{
         text-align: center;
         padding:4rem 2rem;
+
+        @include response(tab-port){
+            margin-bottom:2rem;
+        }
+    
+    }
+
+    &__logo{
+        width:10rem;
+        height:auto;
     }
 
     &__navigation{   
         display:inline-block;     
         border-top:1px solid $dark-grey2;
         margin-right: 5rem;
+
+        @include response(tab-port){
+            width:100%;
+            text-align: center;
+        }
         
     }
 
@@ -52,5 +68,11 @@
         margin-left:6rem;
         // float:right;
         border-top:1px solid $dark-grey2;
+
+        @include response(tab-port){
+           float:none;
+           margin:0;
+           width:100%;
+        }
     }
 }

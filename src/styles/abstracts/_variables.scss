@@ -2,20 +2,33 @@
 $grey-color:#666666;
 $light-grey: #e7e0e0;
 $light-grey-1: #f7f7f7;
+$medium-grey: #cac5c5;
 $dark-grey:#383535;
 $dark-grey2: #999;
 $black-color:#000000;
 $yellow-grey: #dfb864;
-$light-red: #e77f7f;
-$dark-red: #800a0a;
+$light-red: #c26e39;
+$dark-red: #a05a2f;
+$dark-brown:#502b15;
 $green-color: green;
 $white-color: #ffffff;
+
+$color-secondary-light: #ecd67a;
+$color-secondary-dark: #aa8800;
+
+$color-green-light:rgb(144, 190, 144);
+$color-green-dark:rgb(13, 68, 13);
+
+$color-blue-light:rgb(107, 107, 168);
+$color-blue-dark:rgb(1, 1, 75);
+
 
 
 //GRID
 // $wrap-width:130rem;
 $row-width: 114rem;
 $vertical-gutter: 8rem;
+$vertical-gutter-small: 6rem;
 $horizontal-gutter: 6rem;
 
 //FONT-SIZE TEXT

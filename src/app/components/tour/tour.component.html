@@ -1,0 +1,27 @@
+<div class="col-1-of-3-card"  [ngClass] = "{'lastCh': tour.id%3==0}">
+  <div class="card">
+    <div class="card__side card__side--front">
+      <div class="card__picture card__picture--{{tour.id}}">&nbsp;</div>
+      <h2 class="card__heading">
+        <span class="card__heading-span card__heading-span--{{tour.id}}">{{tour.title}}</span></h2>
+      <div class="card__details">
+        <ul>
+          <li>{{tour.duration}} days</li>
+          <li>Up to {{tour.numberOfpeople}} people</li>
+          <li>{{tour.numberOfexcursions}} tour guides</li>
+          <li>{{tour.accomodation}}</li>
+          <li>Difficulty: {{tour.category}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card__side card__side--back card__side--back-{{tour.id}}">
+        <div class="card__back">
+          <div class="card__price-box">
+            <p class="card__price-only">Only</p>
+            <p class="card__price-value">{{tour.price}}</p>
+          </div>
+          <a href="#popup" class="btn btn--white btn--white-{{tour.id}}">Book now!</a>
+        </div>
+    </div>
+  </div>
+</div>

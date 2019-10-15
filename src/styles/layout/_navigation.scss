@@ -8,24 +8,43 @@
         height:7rem;
         border-radius: 50%;
         position: fixed;
-        top:6.6rem;
-        right:6.6rem;
+        top:4rem;
+        right:4rem;
         background-color:$medium-grey;
         z-index:2000;
         text-align: center;
         cursor: pointer;
+
+        @include response(tab-port){
+            top:3rem;
+            right:3rem;
+        }
+        @include response(phone){
+            top:2rem;
+            right:2rem;
+        }
     }
 
     &__background{
         width:6rem;
         height:6rem;
         border-radius:50%;
+        // border: 1px solid $dark-red;
         position: fixed;
-        top:7rem;
-        right:7rem;
-        background-image:radial-gradient($light-grey, $dark-grey);
+        top:4.5rem;
+        right:4.5rem;
+        background-image:radial-gradient($light-grey, $dark-red);
         z-index:1000;
         transition:transform .8s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        @include response(tab-port){
+            top:3.5rem;
+            right:3.5rem;
+        }
+        @include response(phone){
+            top:2.5rem;
+            right:2.5rem;
+        }
     }
 
     &__nav{
@@ -37,6 +56,7 @@
         z-index:1500;
         opacity:0;
         width:0;
+        background-image:radial-gradient($light-grey, $dark-red);
         transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
@@ -95,7 +115,7 @@
         &:after{
             width:3rem;
             height:2px;
-            background-color: $dark-grey;
+            background-color: $dark-red;
             display:inline-block;
             transition: all .2s;
         }

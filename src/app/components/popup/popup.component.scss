@@ -9,7 +9,15 @@
     height:100vh;
     background-color:rgba($dark-grey, .8);
     z-index: 2500;
-    
+    opacity:0;
+    visibility:hidden;
+    transition: all .3s;
+   
+    @supports(-webkit-backdrop-filter: blur(20px))or(backdrop-filter: blur(20px)){
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background-color:rgba($dark-grey, .3);
+    }
 
     &__content{
         @include central;
@@ -20,11 +28,25 @@
         width: 75vw;
         z-index: 3000;
         display: table;
+        -webkit-transform: translate(-50%,-50%) scale(0);
+        transform: translate(-50%,-50%) scale(0);
+        transition: all .5s .2s;
+        opacity: 0;
     }
+
+    // @include response(tab-port){
+    //     width:100vw;
+    //     display: inline;
+    // }
 
     &__left{
         width:33.333333%;
         display:table-cell;
+
+        @include response(tab-port){
+            width:100%;
+            display: block;
+        }
     }
 
     &__right{
@@ -32,11 +54,21 @@
         display:table-cell;
         vertical-align: middle;
         padding:3rem 5rem;
+
+        @include response(tab-port){
+            display: block;
+            width:100%;
+        }
     }
 
     &__img{
         display: block;
         width: 100%;
+
+        @include response(tab-port){
+            display: inline-block;
+            width:50%;
+        }
     }
     &__text{
         font-size: 1.4rem;
@@ -45,5 +77,45 @@
         column-count: 2;
         column-gap: 4rem;
         column-rule: 1px solid $medium-grey;
+
+        hyphens: auto;
+
+        @include response(tab-port){
+            column-count: 1;    
+        }
     }
+
+    &:target{
+        opacity:1;
+        visibility:visible;
+        }
+    &:target &__content{
+        opacity: 1;
+        -webkit-transform: translate(-50%,-50%) scale(1);
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close{
+        &:link,
+        &:active{
+            position: absolute;
+            font-size:3rem;
+            line-height: 0.3;
+            text-decoration: none;
+            color:$dark-grey2;
+            top:2.5rem;
+            right:2.5rem;
+            cursor:pointer;
+            transition:all .2s;
+            display: inline-block;
+            }
+
+            &:hover{
+                color:$dark-red; 
+            }
+
+        }
+
+   
+
 }

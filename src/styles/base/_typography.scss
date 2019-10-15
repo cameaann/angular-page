@@ -1,20 +1,60 @@
+body{
+    font-family: Lato, Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.primary-heading{
+    text-transform:uppercase;
+    background-image: linear-gradient(to right, $dark-red, $dark-brown);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding:15rem 0;
+
+    &--main{
+        display:block;
+        font-size: 6rem;
+        letter-spacing: 3rem;
+
+        @include response(phone){
+            font-size: 3rem;
+            letter-spacing: .5rem;
+            }
+       
+    }
+    &--sub{
+        letter-spacing: 2rem; 
+        font-size: 3rem; 
+
+        @include response(phone){
+            font-size: 2rem;
+            letter-spacing: .5rem;
+            }
+    }    
+}
+
 .secondary-heading{
     display:inline-block;
+    letter-spacing: .2rem;
     font-size: 3rem;
-    margin-bottom: 3rem;
-    margin-top:2rem;
     text-transform:uppercase;
     background-image: linear-gradient(to right, $light-red, $dark-red);
     -webkit-background-clip: text;
     color: transparent;
+
+    @include response(tab-port){
+        font-size: 3rem;
+    }
+
+    @include response(phone){
+        font-size: 2.5rem;
+    }
 
 }
 
 .tertiary-heading{
     font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
-    margin-bottom: 1.3rem;
-    margin-top: 2rem;
     color: $grey-color;
     text-transform: uppercase;
 }

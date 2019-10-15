@@ -1,16 +1,49 @@
 @import 'abstracts/variables';
+@import 'abstracts/mixins';
 
 .booking{
     background-image: linear-gradient(105deg,
         rgba($light-grey, 0.8) 0%,
         rgba($light-grey, 0.8) 50%,
         transparent 50%),
-    url("src/assets/img/pic1.jpg");
+    url("src/assets/img/pic8-small.jpg");
     background-size: cover;
-    height:50rem;
+    height:53rem;
+
+    @include response(tab-land){
+        background-image: linear-gradient(105deg,
+        rgba($light-grey, 0.8) 0%,
+        rgba($light-grey, 0.8) 65%,
+        transparent 65%),
+    url("src/assets/img/pic8-medium.jpg");
+    }
+
+    @include response(tab-port){
+        background-image: linear-gradient(to right,
+        rgba($light-grey, 0.8) 0%,
+        rgba($light-grey, 0.8) 65%),
+        url("src/assets/img/pic8-medium.jpg");
+        height:60rem;
+    }
+
+    @media(min-resolution:192dpi) and (min-width:37.5em),
+    (min-width:125em){
+        background-image: linear-gradient(105deg,
+        rgba($light-grey, 0.8) 0%,
+        rgba($light-grey, 0.8) 65%,
+        transparent 65%),
+        url("src/assets/img/pic8.jpg");
+    }
 
     &__form{
         width:50%;
         padding:4rem;
+
+        @include response(tab-land){
+            width:65%;
+        }
+        @include response(tab-port){
+            width:100%;
+        }
     }
 }
