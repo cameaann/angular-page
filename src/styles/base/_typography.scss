@@ -8,11 +8,12 @@ body{
     text-transform:uppercase;
     background-image: linear-gradient(to right, $dark-red, $dark-brown);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     padding:15rem 0;
 
     &--main{
-        display:block;
+        // display:block;
         font-size: 6rem;
         letter-spacing: 3rem;
 
@@ -20,7 +21,6 @@ body{
             font-size: 3rem;
             letter-spacing: .5rem;
             }
-       
     }
     &--sub{
         letter-spacing: 2rem; 
