@@ -38,7 +38,10 @@
     padding-bottom: 5rem;
     position: relative;
     margin-top:-20rem;
-    // height:100%;
+
+    @include response(tab-port){
+        padding: 15rem 0;
+    }
 
     @include response(phone){
         padding: 15rem 0;
