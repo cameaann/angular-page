@@ -16,7 +16,7 @@
     // margin-top:-10rem;
     transform: skewY(-7deg);
 
-    & >*{
+    & > * {
         transform: skewY(7deg);
     }
 
@@ -34,17 +34,19 @@
 }
 
 .section-stories{
-    padding-top:20rem;
-    padding-bottom: 5rem;
     position: relative;
+    padding-top:20rem;
+    padding-bottom: 15rem;
     margin-top:-20rem;
 
     @include response(tab-port){
-        padding: 15rem 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        margin-top:-5rem;
     }
 
     @include response(phone){
-        padding: 15rem 0;
+        padding: 5rem 0;
     }
 }
 
