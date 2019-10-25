@@ -17,6 +17,10 @@
         @include response(tab-port){
             margin-bottom:2rem;
         }
+
+        @include response(phone-moto){
+            margin:0rem;
+        }
     
     }
 
@@ -26,9 +30,11 @@
     }
 
     &__navigation{   
-        display:inline-block;     
+        display:block;
+        width:auto;     
         border-top:1px solid $dark-grey2;
-        margin-right: 5rem;
+        // margin-right: 5rem;
+        margin: 5rem auto;
 
         @include response(tab-port){
             width:100%;
@@ -40,6 +46,8 @@
     &__list{
         display:inline-block;
         padding-top:2rem;
+        margin:0 auto;
+        
 
         &:not(:last-child){
             margin-right:1.5rem;
@@ -48,7 +56,7 @@
     }
 
     &__link{
-        display:inline-block;
+        display:block;
         text-decoration: none;
         text-transform: uppercase;
         color:$dark-grey; 
@@ -65,14 +73,19 @@
 
     &__copyright{
         display: inline-block;
-        margin-left:6rem;
+        // margin-left:6rem;
         // float:right;
-        border-top:1px solid $dark-grey2;
+        // border-top:1px solid $dark-grey2;
 
         @include response(tab-port){
            float:none;
            margin:0;
            width:100%;
+           border-top:none;
+        }
+
+        @include response(phone){
+            border-top:none;
         }
     }
 }

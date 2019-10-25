@@ -14,7 +14,8 @@
 
 //Media Query Manager
 /*
-0-600px: Phone
+0-360:phone-moto
+360-600px: Phone
 600-900px: Tablet portrait
 900-1200px: Tablet landscape
 [1200-1800px] - is where our normal styles apply
@@ -29,6 +30,9 @@
 */
 
 @mixin response($breakpoint){
+    @if $breakpoint == phone-moto {
+        @media (max-width: 22.5em) {@content; } //360px
+    }
     @if $breakpoint == phone {
         @media (max-width: 37.5em) {@content; } //600px
     }

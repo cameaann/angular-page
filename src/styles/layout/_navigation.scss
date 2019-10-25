@@ -20,6 +20,8 @@
             right:3rem;
         }
         @include response(phone){
+            width:5rem;
+            height:5rem;
             top:2rem;
             right:2rem;
         }
@@ -42,6 +44,8 @@
             right:3.5rem;
         }
         @include response(phone){
+            width:4rem;
+            height:4rem;
             top:2.5rem;
             right:2.5rem;
         }
@@ -110,6 +114,11 @@
         position: relative;
         margin-top:3.5rem;
 
+        @include response(phone){
+            margin-top:2.5rem;
+
+        }
+
         &,
         &::before,
         &:after{
@@ -118,6 +127,11 @@
             background-color: $dark-red;
             display:inline-block;
             transition: all .2s;
+
+            @include response(phone){
+                width:2rem;
+                height:1px;
+            }
         }
 
         &::before,

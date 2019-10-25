@@ -39,6 +39,7 @@ body{
     text-transform:uppercase;
     background-image: linear-gradient(to right, $light-red, $dark-red);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 
     @include response(tab-port){
@@ -53,7 +54,7 @@ body{
 
 .tertiary-heading{
     font-family: Lato, Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+    font-size: $default-font-size;
     color: $grey-color;
     text-transform: uppercase;
 }

@@ -27,10 +27,14 @@
         }
     }
 
-
     @include response(tab-port){
         width:50rem;
     }
+
+    // @include response(phone-moto){
+    //     padding:0 1rem;
+    //     max-width: 40rem;
+    // }
 
     .col-1-of-2{
         width: calc((100% - #{$horizontal-gutter})/2); 
