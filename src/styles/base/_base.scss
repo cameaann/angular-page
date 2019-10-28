@@ -11,11 +11,11 @@ html{
     font-size: 62.5%;
 
     
-    @include response(tab-land){ //width<1200px ?
+    @include response(tab-land){ //width<1200px
         font-size: 56.25%; //1rem=9px 9px/16px=56.25%
     }
 
-    @include response(tab-port){ //width<900px ?
+    @include response(tab-port){ //width<900px
         font-size: 50%; //1rem=8px 8px/16px=50%
     }
 
