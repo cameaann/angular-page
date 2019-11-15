@@ -8,6 +8,10 @@
             margin-bottom: $vertical-gutter-small;
             padding:0 3rem;
         }
+        @include response(phone){
+            margin-bottom: $vertical-gutter-small;
+            padding: 0;
+        }
     }
     
     @include clearfix;
@@ -28,13 +32,12 @@
     }
 
     @include response(tab-port){
-        width:50rem;
+        width:50%;
     }
 
-    // @include response(phone-moto){
-    //     padding:0 1rem;
-    //     max-width: 40rem;
-    // }
+    @include response(phone){
+        width:100%;
+    }
 
     .col-1-of-2{
         width: calc((100% - #{$horizontal-gutter})/2); 

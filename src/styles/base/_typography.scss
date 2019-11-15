@@ -57,10 +57,12 @@ body{
     font-size: $default-font-size;
     color: $grey-color;
     text-transform: uppercase;
+    margin-left:3rem;
 }
 
 p{
-    font-size: 1.4rem;
+    font-size:$default-font-size;
+    padding: 1rem 3rem;
 
     &:not(last-child){
         margin-bottom: 1rem;
