@@ -9,10 +9,13 @@ transition: transform .3s;
 
 @include response(tab-port){
     padding:2rem;
+    width:80%;
+    margin:0 auto;
 }
 
     &__icon{
-        font-size: 5rem;
+        font-size: 4rem;
+        padding:.5rem;
         display:inline-block;
         margin-bottom:.5rem;
         background-image: linear-gradient(to right, $light-red, $dark-red);
