@@ -8,7 +8,7 @@
         height:7rem;
         border-radius: 50%;
         position: fixed;
-        top:4rem;
+        top:9rem;
         right:4rem;
         background-color:$medium-grey;
         z-index:2000;
@@ -16,13 +16,13 @@
         cursor: pointer;
 
         @include response(tab-port){
-            top:3rem;
+            top:7rem;
             right:3rem;
         }
         @include response(phone){
             width:5rem;
             height:5rem;
-            top:2rem;
+            top:7rem;
             right:2rem;
         }
     }
@@ -33,20 +33,20 @@
         border-radius:50%;
         // border: 1px solid $dark-red;
         position: fixed;
-        top:4.5rem;
+        top:9.5rem;
         right:4.5rem;
         background-image:radial-gradient($light-grey, $dark-red);
         z-index:1000;
         transition:transform .8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         @include response(tab-port){
-            top:3.5rem;
+            top:7.5rem;
             right:3.5rem;
         }
         @include response(phone){
             width:4rem;
             height:4rem;
-            top:2.5rem;
+            top:7.5rem;
             right:2.5rem;
         }
     }
@@ -73,7 +73,7 @@
     }
 
     &__item{
-        margin:1rem; 
+        margin:1rem;
     }
 
     &__link{
@@ -103,7 +103,7 @@
 
     &__checkbox:checked ~ &__background{
         transform: scale(70);
-        
+
     }
     &__checkbox:checked ~ &__nav{
         opacity:1;

@@ -11,6 +11,7 @@ import { PopupComponent } from './components/popup/popup.component';
 import { SectionToursComponent } from './components/section-tours/section-tours.component';
 import { TourComponent } from './components/tour/tour.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DemoInfoComponent } from './components/demo-info/demo-info.component';
 
 
 
@@ -25,6 +26,7 @@ import { HeaderComponent } from './components/header/header.component';
     SectionToursComponent,
     TourComponent,
     HeaderComponent,
+    DemoInfoComponent,
   ],
   imports: [
     BrowserModule,
