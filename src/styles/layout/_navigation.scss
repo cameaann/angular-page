@@ -1,4 +1,20 @@
 .navigation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width:7rem;
+    height:7rem;
+
+    @include response(tab-port){
+        width:6rem;
+        height:6rem;
+    }
+    @include response(phone){
+        width:5rem;
+        height:5rem;
+    }
+
     &__checkbox{
         display:none;
     }
@@ -8,22 +24,18 @@
         height:7rem;
         border-radius: 50%;
         position: fixed;
-        top:9rem;
-        right:4rem;
         background-color:$medium-grey;
         z-index:2000;
         text-align: center;
         cursor: pointer;
 
         @include response(tab-port){
-            top:7rem;
-            right:3rem;
+            width:6rem;
+            height:6rem;
         }
         @include response(phone){
             width:5rem;
             height:5rem;
-            top:7rem;
-            right:2rem;
         }
     }
 
@@ -31,23 +43,19 @@
         width:6rem;
         height:6rem;
         border-radius:50%;
-        // border: 1px solid $dark-red;
+        border: 1px solid $dark-red;
         position: fixed;
-        top:9.5rem;
-        right:4.5rem;
         background-image:radial-gradient($light-grey, $dark-red);
         z-index:1000;
         transition:transform .8s cubic-bezier(0.645, 0.045, 0.355, 1);
 
         @include response(tab-port){
-            top:7.5rem;
-            right:3.5rem;
+            width:5rem;
+            height:5rem;
         }
         @include response(phone){
             width:4rem;
             height:4rem;
-            top:7.5rem;
-            right:2.5rem;
         }
     }
 
@@ -113,6 +121,11 @@
     &__icon{
         position: relative;
         margin-top:3.5rem;
+
+        @include response(tab-port){
+            margin-top:3rem;
+
+        }
 
         @include response(phone){
             margin-top:2.5rem;

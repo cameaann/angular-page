@@ -10,7 +10,7 @@
     url('src/assets/img/header-pic-small2.jpg');
     background-size: cover;
     overflow: hidden;
-    
+
     // background-position: top;
 
     @media screen and (min-resolution:192dpi) and (min-width:37.5em),
@@ -29,17 +29,24 @@
     @include response(phone){
         height:45vh;
     }
-   
-    &__logobox{
-        position:absolute; 
-        top:4rem;
-        left:4rem;
 
-        @include response(phone){
-            top:2rem;
-            left:2rem;
-        }
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 2rem auto;
     }
+
+    // &__logobox{
+    //     position:absolute;
+    //     top:4rem;
+    //     left:4rem;
+
+    //     @include response(phone){
+    //         top:2rem;
+    //         left:2rem;
+    //     }
+    // }
 
     &__logo{
         height:7rem;
