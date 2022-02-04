@@ -12,7 +12,6 @@ export class DemoInfoComponent implements OnInit {
 
   ngOnInit() {
     this.userLanguage = window.navigator.language;
-    console.log(this.userLanguage);
 
     if(this.userLanguage == "ru"){
       this.brString = "Это демо-проект для портфолио Шестаковой Анны. Мой email: cameaann@gmail.com";
